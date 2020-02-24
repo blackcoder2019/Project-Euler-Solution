@@ -1,0 +1,45 @@
+solution by Md Ariful Islam
+
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+long long int work(int s) {
+    int sum = 0;
+
+    for (int i = 1; i <= s; i++) {
+        if ((i % 3 == 0) || (i % 5 == 0) || (i % 3 == 0 && i % 5 == 0)) {
+            sum = sum + i;
+        }
+    }
+    return sum;
+}
+
+
+int main() {
+
+
+    int t;
+    cin >> t;
+    while (t--) {
+        int x;
+        cin >> x;
+        x--;
+        cout << work(x);
+
+
+    }
+
+
+}
+
+//ans for 10 => 23 
+//ans for 1000=> 233168
+
+
+
